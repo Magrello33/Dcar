@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DCAR Auto Peças e Sucatas</title>
+
+<!-- TAG (ESPAÇO PARA GOOGLE ADS / PIXEL) -->
+<!-- COLE SUA TAG AQUI -->
+
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+    background:#111;
+    color:#fff;
+}
+
+/* LOGO */
+.topo{
+    background:#000;
+    padding:15px;
+    text-align:center;
+}
+.topo img{
+    max-width:200px;
+}
+
+/* BANNER */
+.banner{
+    width:100%;
+}
+
+/* SLIDER */
+.slider{
+    position:relative;
+    max-width:100%;
+    overflow:hidden;
+}
+.slides{
+    display:flex;
+    animation: slide 16s infinite;
+}
+.slides img{
+    width:100%;
+}
+@keyframes slide{
+    0%{margin-left:0;}
+    25%{margin-left:0;}
+    30%{margin-left:-100%;}
+    55%{margin-left:-100%;}
+    60%{margin-left:-200%;}
+    85%{margin-left:-200%;}
+    90%{margin-left:-300%;}
+    100%{margin-left:-300%;}
+}
+
+/* DEPOIMENTOS */
+.depoimentos{
+    padding:30px;
+    text-align:center;
+}
+.depoimento{
+    margin-bottom:20px;
+}
+
+/* FORM */
+.form{
+    padding:30px;
+    text-align:center;
+}
+input, textarea{
+    width:90%;
+    padding:10px;
+    margin:10px;
+    border:none;
+}
+button{
+    background:red;
+    color:#fff;
+    padding:15px;
+    border:none;
+    cursor:pointer;
+}
+
+/* WHATS */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:#fff;
+    padding:15px;
+    border-radius:50%;
+    text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+    background:#000;
+    padding:20px;
+    text-align:center;
+}
+footer a{
+    color:#fff;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGO -->
+<div class="topo">
+    <img src="logo.png">
+</div>
+
+<!-- BANNER PRINCIPAL -->
+<img src="banner.jpg" class="banner">
+
+<!-- SLIDER -->
+<div class="slider">
+    <div class="slides">
+        <img src="img1.jpg">
+        <img src="img2.jpg">
+        <img src="img3.jpg">
+        <img src="img4.jpg">
+    </div>
+</div>
+
+<!-- DEPOIMENTOS -->
+<div class="depoimentos">
+    <h2>Clientes Satisfeitos</h2>
+
+    <div class="depoimento">
+        ⭐⭐⭐⭐⭐<br>
+        “Peça chegou rápido e funcionando perfeito!”<br>
+        <b>— Carlos Henrique</b>
+    </div>
+
+    <div class="depoimento">
+        ⭐⭐⭐⭐⭐<br>
+        “Preço muito melhor que loja comum.”<br>
+        <b>— Juliana Souza</b>
+    </div>
+
+    <div class="depoimento">
+        ⭐⭐⭐⭐⭐<br>
+        “Atendimento top, recomendo demais.”<br>
+        <b>— Marcos Silva</b>
+    </div>
+
+</div>
+
+<!-- FORMULÁRIO -->
+<div class="form">
+    <h2>Fale com a gente</h2>
+
+<form action="https://formsubmit.co/desmanchemecanicabr@gmail.com" method="POST">
+<input type="text" name="nome" placeholder="Seu nome" required>
+<input type="tel" name="telefone" placeholder="Seu telefone" required>
+<textarea name="mensagem" placeholder="Qual peça você procura?" required></textarea>
+
+<input type="hidden" name="_next" value="obrigado.html">
+
+<button type="submit">Enviar</button>
+</form>
+</div>
+
+<!-- WHATS -->
+<a class="whatsapp" href="https://wa.me/5561999999999" target="_blank">💬</a>
+
+<!-- RODAPÉ -->
+<footer>
+    <p>DCAR Auto Peças e Sucatas</p>
+    <a href="politica.html">Política de Privacidade</a>
+</footer>
+
+</body>
+</html>
