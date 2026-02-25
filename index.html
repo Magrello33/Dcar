@@ -6,8 +6,6 @@
 
 <title>DCAR Auto Peças e Sucatas</title>
 
-<!-- TAG GOOGLE (COLE AQUI) -->
-
 <style>
 body {
     margin:0;
@@ -56,7 +54,6 @@ header img {
     background:rgba(0,0,0,0.6);
     padding:10px 20px;
     border-radius:8px;
-    font-size:20px;
 }
 
 /* CTA */
@@ -73,8 +70,14 @@ header img {
     text-decoration:none;
     font-size:18px;
     font-weight:bold;
-    display:inline-block;
-    margin-top:10px;
+}
+
+/* URGÊNCIA */
+.urgencia {
+    background:#ff0000;
+    text-align:center;
+    padding:10px;
+    font-weight:bold;
 }
 
 /* FAIXA */
@@ -107,14 +110,12 @@ header img {
     background:#1a1a1a;
     padding:15px;
     border-radius:10px;
-    border:1px solid #222;
 }
 
 /* CARROSSEL */
 .carrossel {
     overflow:hidden;
     margin:20px;
-    border-radius:10px;
 }
 
 .slides {
@@ -158,7 +159,7 @@ form {
 input, textarea {
     width:100%;
     margin-bottom:10px;
-    padding:10px;
+    padding:12px;
     border:none;
     border-radius:5px;
 }
@@ -179,17 +180,29 @@ button {
     padding:20px;
 }
 
-/* WHATSAPP */
+/* BOTÃO WHATSAPP FIXO COMPACTO */
 .whatsapp-fixo {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 18px;
+    right: 18px;
     background: #25d366;
     color: #fff;
-    padding: 14px 18px;
-    border-radius: 50px;
+    padding: 8px 12px;       /* menos padding, mais compacto */
+    max-width: 140px;        /* largura menor */
+    border-radius: 20px;
+    font-size: 13px;         /* tamanho da fonte reduzido */
     font-weight: bold;
     text-decoration: none;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-align: center;
+    white-space: normal;     /* permite quebra de linha */
+    z-index: 999;
+}
+
 }
 
 /* FOOTER */
@@ -197,19 +210,11 @@ footer {
     background:#050505;
     padding:40px 20px;
     border-top:2px solid red;
-    text-align:center;
 }
 
 footer a {
     color:#fff;
-    margin:0 10px;
     text-decoration:none;
-}
-
-@media(min-width:768px){
-.grid {
-    grid-template-columns:repeat(3,1fr);
-}
 }
 </style>
 </head>
@@ -218,29 +223,31 @@ footer a {
 
 <header>
 <div class="topo">
-
-<img src="logo.png" alt="DCAR">
+<img src="logo.png">
 
 <div class="texto-header">
 <strong>✔ Desmanche legalizado</strong><br>
 ⚡ Enviamos sua peça hoje • Atendimento imediato
 </div>
-
 </div>
 </header>
 
 <div class="banner">
-<h1>Peças com Qualidade • Garantia • Envio Rápido</h1>
+<h1>Peças com Garantia • Entrega Rápida</h1>
+</div>
+
+<div class="urgencia">
+⚠️ Últimas peças disponíveis • Consulte agora
 </div>
 
 <div class="cta">
 <h2>⚡ Fale agora e garanta sua peça</h2>
 
 <a href="https://wa.me/5562999498053?text=Olá,%20vim%20pelo%20site%20e%20preciso%20de%20uma%20peça">
-CHAMAR AGORA
+🔥 CHAMAR AGORA
 </a>
 
-<p style="color:#00ff88;">🔥 Atendimento rápido • Sem compromisso</p>
+<p style="color:#00ff88;">✔ Resposta rápida • Sem compromisso</p>
 </div>
 
 <div class="faixa">
@@ -249,19 +256,14 @@ CHAMAR AGORA
 
 <div class="contador">
 <h2>+10.000 peças disponíveis</h2>
-<p>Estoque atualizado diariamente</p>
 </div>
 
 <section class="servicos">
 <h2>Nossos Serviços</h2>
-
 <div class="grid">
 <div class="card">Peças Originais</div>
 <div class="card">Envio para todo Brasil</div>
-<div class="card">Atendimento rápido</div>
-<div class="card">Peças de desmanche</div>
-<div class="card">Carros e motos</div>
-<div class="card">Garantia nas peças</div>
+<div class="card">Garantia</div>
 </div>
 </section>
 
@@ -275,43 +277,75 @@ CHAMAR AGORA
 </section>
 
 <section class="depoimentos">
-<h2>Depoimentos</h2>
-<div class="dep">João Silva: Comprei motor, chegou perfeito!</div>
-<div class="dep">Carlos Mendes: Farol top, entrega rápida!</div>
-<div class="dep">Marcos Lima: Câmbio funcionando 100%</div>
+<h2>⭐ Avaliações de Clientes</h2>
+<div class="dep">⭐⭐⭐⭐⭐ João: Motor chegou perfeito</div>
+<div class="dep">⭐⭐⭐⭐⭐ Carlos: Entrega rápida</div>
+<div class="dep">⭐⭐⭐⭐⭐ Marcos: Peça funcionando 100%</div>
+<div class="dep">⭐⭐⭐⭐⭐ André: Produto bem embalado</div>
+<div class="dep">⭐⭐⭐⭐⭐ Rafael: Atendimento rápido</div>
 </section>
 
 <form action="https://formsubmit.co/dcarautopecasesucatas@gmail.com" method="POST">
 
-<h2>Solicitar Peça</h2>
+<h2>📩 Solicitar Peça</h2>
 
 <input type="text" name="nome" placeholder="Seu nome" required>
-<input type="text" name="telefone" placeholder="Telefone" required>
+<input type="text" name="telefone" placeholder="Seu WhatsApp" required>
 <textarea name="mensagem" placeholder="Qual peça você precisa?" required></textarea>
 
-<button type="submit">Enviar</button>
+<button type="submit">🚀 ENVIAR PEDIDO</button>
 
 <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_subject" value="Novo pedido de peça - DCAR">
+<input type="hidden" name="_subject" value="Novo pedido - DCAR">
 <input type="hidden" name="_next" value="https://dcarautopecas.online/obrigado.html">
 
 </form>
 
 <section class="mapa">
 <iframe src="https://www.google.com/maps?q=R%20DQ%20DE%20CAXIAS%20216%20GOIANIA&output=embed"
-style="width:100%; height:300px; border:0;">
-</iframe>
+style="width:100%; height:300px; border:0;"></iframe>
 </section>
 
 <footer>
-<p>© 2026 DCAR Auto Peças</p>
-<a href="sobre.html">Sobre nós</a>
-<a href="politica.html">Política de Privacidade</a>
-<a href="obrigado.html">Obrigado</a>
+<div style="max-width:900px; margin:auto; text-align:left;">
+
+<h2 style="color:red;">DCAR Auto Peças</h2>
+<p style="color:#ccc;">Peças automotivas com procedência • Envio rápido para todo Brasil</p>
+
+<hr style="border:1px solid #222; margin:20px 0;">
+
+<h3>📄 Institucional</h3>
+<p><a href="sobre.html">Sobre nós</a></p>
+<p><a href="politica.html">Política de Privacidade</a></p>
+<p><a href="cnpj.html">Dados da Empresa (CNPJ)</a></p>
+
+<hr style="border:1px solid #222; margin:20px 0;">
+
+<h3>📞 Contato</h3>
+<p>WhatsApp: (62) 99949-8053</p>
+<p>Goiânia - GO</p>
+
+<hr style="border:1px solid #222; margin:20px 0;">
+
+<h3>⚡ Atendimento</h3>
+<p style="color:#00ff88;">✔ Resposta rápida no WhatsApp</p>
+<p style="color:#00ff88;">✔ Enviamos para todo Brasil</p>
+<p style="color:#00ff88;">✔ Peças com garantia</p>
+
+<hr style="border:1px solid #222; margin:20px 0;">
+
+<p style="color:#777; font-size:13px;">
+CNPJ: 53.161.631/0001-59<br>
+© 2026 DCAR Auto Peças - Todos os direitos reservados
+</p>
+
+</div>
 </footer>
 
-<a href="https://wa.me/5562999498053?text=Olá,%20vim%20pelo%20site%20e%20quero%20um%20orçamento" class="whatsapp-fixo">
-💬 CHAMAR AGORA
+<!-- BOTÃO WHATSAPP FIXO -->
+<a href="https://wa.me/5562999498053?text=Olá,%20vim%20pelo%20site%20e%20quero%20um%20orçamento" 
+class="whatsapp-fixo" target="_blank">
+💬 PEÇA AGORA PELO WHATSAPP
 </a>
 
 </body>
