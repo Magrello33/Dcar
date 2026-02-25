@@ -355,25 +355,18 @@ CNPJ: 53.161.631/0001-59<br>
 
 <!-- Botão WhatsApp com conversão -->
 <a href="https://wa.me/5562999498053?text=Olá,%20vim%20pelo%20site%20e%20quero%20um%20orçamento"
-   onclick="return gtag_report_conversion();" 
+   onclick="gtag_report_conversion();"
    class="whatsapp-fixo" target="_blank">
 💬 PEÇA AGORA PELO WHATSAPP
 </a>
 
 <script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
+function gtag_report_conversion() {
   gtag('event', 'conversion', {
       'send_to': 'AW-17854148234/7n0bCO6ehv8bEIrdwsFC',
       'value': 1.0,
-      'currency': 'BRL',
-      'event_callback': callback
+      'currency': 'BRL'
   });
-  return false;
 }
 </script>
 
